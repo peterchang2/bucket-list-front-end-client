@@ -35,9 +35,8 @@ const onGetAllItems = function (event) {
 const onTextUpdate = function (event) {
   event.preventDefault()
   const id = $(event.target).parent('div').data('id')
-  const text = $('.update-text-form-' + event.target.attributes['data-id'].value).val()
-  api.textUpdate(id, text)
-    .then(console.log(id))
+  const caption = $('.update-text-form-' + event.target.attributes['data-id'].value).val()
+  api.textUpdate(id, caption)
     .then(() => onGetAllItems(event))
   // .then(ui.captionUpdateSuccess)
     .catch(ui.failure)
@@ -56,8 +55,8 @@ const onTextUpdate = function (event) {
 
 const onDeleteItem = function (event) {
   event.preventDefault()
-  const id = $(event.target).parents('div').data('id')
-  api.deleteImageById(id)
+  const _id = $(event.target).parents('div').data('id')
+  api.deleteItemById(_id)
     .then(() => onGetAllItems(event))
     .catch(ui.failure)
 }

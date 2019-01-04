@@ -17,16 +17,16 @@ const upload = function (title, text) {
           'title': title,
           'text': text,
           'completed': false,
-          'user_id': store.user._id
+          'user_id': store.user.id
         }
       })
   })
 }
 
-const textUpdate = function (id, text) {
+const textUpdate = function (_id, text) {
   return $.ajax({
     method: 'PATCH',
-    url: config.apiUrl + `/items/${id}`,
+    url: config.apiUrl + `/items/${_id}`,
     contentType: 'application/json',
     headers: {
       Authorization: `Token token=${store.user.token}`
@@ -35,7 +35,7 @@ const textUpdate = function (id, text) {
       {
         'item': {
           'text': text,
-          'user_id': store.user._id
+          'user_id': store.user.id
         }
       })
   })
@@ -53,21 +53,21 @@ const getAllItems = function (inputData) {
   })
 }
 
-const getImageId = function (imageId) {
-  return $.ajax({
-    method: 'GET',
-    url: config.apiUrl + '/images/' + imageId,
-    contentType: 'application/json',
-    headers: {
-      Authorization: `Token token=${store.user.token}`
-    }
-  })
-}
+// const getImageId = function (imageId) {
+//   return $.ajax({
+//     method: 'GET',
+//     url: config.apiUrl + '/images/' + imageId,
+//     contentType: 'application/json',
+//     headers: {
+//       Authorization: `Token token=${store.user.token}`
+//     }
+//   })
+// }
 
-const deleteImageById = function (id) {
+const deleteItemById = function (_id) {
   return $.ajax({
     method: 'DELETE',
-    url: config.apiUrl + `/images/${id}`,
+    url: config.apiUrl + `/items/${_id}`,
     contentType: 'application/json',
     headers: {
       Authorization: `Token token=${store.user.token}`
@@ -108,8 +108,7 @@ const deleteImageById = function (id) {
 
 module.exports = {
   upload,
-  getImageId,
   getAllItems,
-  deleteImageById,
+  deleteItemById,
   textUpdate
 }
