@@ -17,7 +17,7 @@ const upload = function (title, text) {
           'title': title,
           'text': text,
           'completed': false,
-          'user_id': store.user.id
+          'user_id': store.user._id
         }
       })
   })
@@ -35,7 +35,7 @@ const textUpdate = function (id, text) {
       {
         'item': {
           'text': text,
-          'user_id': store.user.id
+          'user_id': store.user._id
         }
       })
   })

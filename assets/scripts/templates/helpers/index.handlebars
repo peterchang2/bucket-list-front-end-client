@@ -1,10 +1,10 @@
 {{#each this as |items|}}
   {{#items}}
-      <div class="all-items" data-id={{id}}>
+      <div class="all-items" data-id="{{_id}}">
         <h4>{{title}} -- {{text}}</h4>
-        <form class="text-update" data-id={{id}}>
-          <input required minlength='1' class="update-text-form-{{id}}" type="text" placeholder="New Caption" data-id={{id}}>
-          <input class="update-text-btn" type="submit" name="item[text]" value="Update" data-id={{id}}>
+        <form class="text-update" data-id="{{_id}}">
+          <input required minlength='1' class="update-text-form-{{_id}}" type="text" placeholder="New Caption" data-id="{{_id}}">
+          <input class="update-text-btn" type="submit" name="item[text]" value="Update" data-id="{{_id}}">
         </form>
         <button type="button" name="remove" class="item-remove-btn">Remove</button>
       </div>
