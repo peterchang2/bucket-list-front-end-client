@@ -1,13 +1,13 @@
 'use strict'
 
-// const authEvents = require('./auth/events.js')
+const authEvents = require('./auth/events.js')
 // const addItemEvents = require('./upload/events.js')
 
 $(() => {
-  // $('#sign-up-form').on('submit', authEvents.onSignUp)
-  // $('#sign-in-form').on('submit', authEvents.onSignIn)
-  // $('#change-password-form').on('submit', authEvents.onChangePassword)
-  // $('.sign-out-btn').on('click', authEvents.onSignOut)
+  $('#sign-up-form').on('submit', authEvents.onSignUp)
+  $('#sign-in-form').on('submit', authEvents.onSignIn)
+  $('#change-password-form').on('submit', authEvents.onChangePassword)
+  $('.sign-out-btn').on('click', authEvents.onSignOut)
   //
   // $('.upload-area').on('submit', addItemEvents.onUpload)
   // $('.get-all-item-btn').on('click', addItemEvents.onGetAllImages)
