@@ -40,6 +40,23 @@ const textUpdate = function (_id, text) {
       })
   })
 }
+const titleUpdate = function (_id, title) {
+  return $.ajax({
+    method: 'PATCH',
+    url: config.apiUrl + `/items/${_id}`,
+    contentType: 'application/json',
+    headers: {
+      Authorization: `Token token=${store.user.token}`
+    },
+    data: JSON.stringify(
+      {
+        'item': {
+          'title': title,
+          'user_id': store.user.id
+        }
+      })
+  })
+}
 
 const getAllItems = function (inputData) {
   return $.ajax({
@@ -110,5 +127,6 @@ module.exports = {
   upload,
   getAllItems,
   deleteItemById,
-  textUpdate
+  textUpdate,
+  titleUpdate
 }

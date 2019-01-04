@@ -41,6 +41,15 @@ const onTextUpdate = function (event) {
   // .then(ui.captionUpdateSuccess)
     .catch(ui.failure)
 }
+const onTitleUpdate = function (event) {
+  event.preventDefault()
+  const id = $(event.target).parent('div').data('id')
+  const title = $('.update-title-form-' + event.target.attributes['data-id'].value).val()
+  api.titleUpdate(id, title)
+    .then(() => onGetAllItems(event))
+  // .then(ui.captionUpdateSuccess)
+    .catch(ui.failure)
+}
 
 // const onGetImage = function (event) {
 //   event.preventDefault()
@@ -65,5 +74,6 @@ module.exports = {
   onUpload,
   onGetAllItems,
   onDeleteItem,
-  onTextUpdate
+  onTextUpdate,
+  onTitleUpdate
 }

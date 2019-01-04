@@ -13,6 +13,8 @@ $(() => {
   $('.get-all-item-btn').on('click', addItemEvents.onGetAllItems)
   $('.item-wall').on('click', '.item-remove-btn', addItemEvents.onDeleteItem)
   $('.item-wall').on('submit', '.text-update', addItemEvents.onTextUpdate)
+  $('.item-wall').on('submit', '.title-update', addItemEvents.onTitleUpdate)
+
 
   $('.navbar-toggler').click(function () {
     $('.input-field').val('')
