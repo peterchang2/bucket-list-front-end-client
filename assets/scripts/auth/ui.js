@@ -2,89 +2,120 @@
 
 const store = require('../store.js')
 
-const signUpSuccess = function (signUpResponse) {
-  $('#message').show(500)
-  $('#message').html('You signed up successfully')
-  $('#message').addClass('success-message')
-  $('#message').removeClass('error-message')
+const failure = function (FailureResponse) {
+  $('.message-box').show(100)
+  $('.message-box').html('Something Went Wrong, Try Again')
+  $('.message-box').removeClass('success-message')
+  $('.message-box').addClass('error-message')
   setTimeout(function () {
-    $('#message').fadeOut().empty()
-  }, 2000)
+    $('.message-box').fadeOut(200).empty()
+  }, 3000)
 }
 
-const failure = function (signUpFailureResponse) {
-  $('#message').show(500)
-  $('#message').html('Something went wrong, please try again')
-  $('#message').removeClass('success-message')
-  $('#message').addClass('error-message')
+const passDoesntMatch = function (FailureResponse) {
+  $('.message-box').show(100)
+  $('.message-box').html('Passwords Does Not Match')
+  $('.message-box').removeClass('success-message')
+  $('.message-box').addClass('error-message')
   setTimeout(function () {
-    $('#message').fadeOut().empty()
-  }, 2000)
+    $('.message-box').fadeOut(300).empty()
+  }, 5000)
+}
+
+const signInFailure = function (FailureResponse) {
+  $('.message-box').show(100)
+  $('.message-box').html('Email And Password Does Not Match, or Account Does Not Exist')
+  $('.message-box').removeClass('success-message')
+  $('.message-box').addClass('error-message')
+  setTimeout(function () {
+    $('.message-box').fadeOut(200).empty()
+  }, 3000)
+}
+
+const changePassFailure = function () {
+  $('.message-box').show(100)
+  $('.message-box').html('New Password Cannot Match Old Password')
+  $('.message-box').removeClass('success-message')
+  $('.message-box').addClass('error-message')
+  setTimeout(function () {
+    $('.message-box').fadeOut(200).empty()
+  }, 3000)
+}
+
+const signUpSuccess = function (signUpResponse) {
+  $('.message-box').show(100)
+  $('.message-box').html('You Signed Up Successfully')
+  $('.sign-up-form').slideUp(200)
+  $('.message-box').removeClass('error-message')
+  $('.message-box').addClass('success-message')
+  setTimeout(function () {
+    $('.message-box').fadeOut(200).empty()
+  }, 3000)
 }
 
 const signInSuccess = function (signInResponse) {
   store.user = signInResponse.user
-  $('#message').show(500)
-  $('#message').html('You signed in successfully')
-  $('#message').addClass('success-message')
-  $('#message').removeClass('error-message')
-  $('#change-password').removeClass('hidden')
-  $('#sign-out').removeClass('hidden')
-  $('#sign-up').addClass('hidden')
-  $('#sign-in').fadeOut(200)
-  $('#update-item').removeClass('hidden')
-  $('#create-item').removeClass('hidden')
-  $('#activity').removeClass('hidden')
-  $('#delete-item').removeClass('hidden')
-  $('.signout-btn').removeClass('hidden')
-  $('.changepass-btn').removeClass('hidden')
-  $('.signin-btn').addClass('hidden')
-  $('.signup-btn').addClass('hidden')
+  $('.message-box').show(100)
+  $('.user-name').html(`${signInResponse.user.email} - `)
+  $('.message-box').html('You Signed In Successfully')
+  $('.message-box').removeClass('error-message')
+  $('.message-box').addClass('success-message')
+  // $('.upload-section').addClass('block')
+  // $('.upload-section').removeClass('hidden')
+  $('.sign-up-form').fadeOut(200)
+  $('.sign-in-form').fadeOut(200)
+  $('.chg-pass-btn').show()
+  $('.sign-out-btn').show()
+  $('.get-all-item-btn').show()
+  $('.get-image-by-id-btn').show()
+  $('.delete-image-btn').show()
+  $('.sign-up-btn').hide()
+  $('.sign-in-btn').hide()
   setTimeout(function () {
-    $('#message').fadeOut().empty()
-  }, 2000)
+    $('.message-box').fadeOut(300).empty()
+  }, 3000)
 }
 
 const changePasswordSuccess = function (changePasswordResponse) {
-  $('#message').show(500)
-  $('#message').html('You changed your password successfully')
-  $('#message').addClass('success-message')
-  $('#message').removeClass('error-message')
+  $('.message-box').show(100)
+  $('.message-box').html('You Changed Password Successfully')
+  $('.message-box').removeClass('error-message')
+  $('.message-box').addClass('success-message')
+  $('#change-password-form').slideUp(500)
   setTimeout(function () {
-    $('#message').fadeOut().empty()
-  }, 2000)
+    $('.message-box').fadeOut(300).empty()
+  }, 3000)
 }
 
 const signOutSuccess = function () {
-  $('#message').show(500)
-  $('#message').html('You signed out successfully')
-  $('#message').addClass('success-message')
-  $('#message').removeClass('error-message')
-  $('#change-password').addClass('hidden')
-  $('#change-password').trigger('reset')
-  $('#sign-out').addClass('hidden')
-  $('#sign-up').removeClass('hidden')
-  $('#create-item').addClass('hidden')
-  $('#activity').addClass('hidden')
-  $('#update-item').addClass('hidden')
-  $('#delete-item').addClass('hidden')
-  $('#delete-item').trigger('reset')
-  $('.signin-btn').removeClass('hidden')
-  $('.signup-btn').removeClass('hidden')
-  $('.signout-btn').addClass('hidden')
-  $('.changepass-btn').addClass('hidden')
-  $('#item-message').addClass('hidden')
-  $('#create-item').trigger('reset')
-  $('#update-item').trigger('reset')
-  $('#content').empty()
+  $('.message-box').show(100)
+  $('.message-box').html('You Signed Out Successfully')
+  $('.message-box').removeClass('error-message')
+  $('.message-box').addClass('success-message')
+  $('.user-name').empty()
+  $('.chg-pass-btn').hide()
+  $('.change-password-form').fadeOut(200)
+  $('.get-image-by-id-form').fadeOut(200)
+  $('.sign-out-btn').hide()
+  $('.get-all-item-btn').hide()
+  // $('.upload-section').removeClass('block')
+  // $('.upload-section').addClass('hidden')
+  $('.item-wall').empty()
+  $('.sign-up-btn').show()
+  $('.sign-in-btn').show()
+  $('#change-password-form').trigger('reset')
   setTimeout(function () {
-    $('#message').fadeOut().empty()
-  }, 2000)
+    $('.message-box').fadeOut(200).empty()
+  }, 3000)
 }
+
 module.exports = {
+  failure,
   signUpSuccess,
   signInSuccess,
-  failure,
   changePasswordSuccess,
-  signOutSuccess
+  signOutSuccess,
+  changePassFailure,
+  signInFailure,
+  passDoesntMatch
 }
