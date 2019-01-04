@@ -1,7 +1,7 @@
 'use strict'
 
 const authEvents = require('./auth/events.js')
-// const addItemEvents = require('./upload/events.js')
+const addItemEvents = require('./upload/events.js')
 
 $(() => {
   $('#sign-up-form').on('submit', authEvents.onSignUp)
@@ -9,10 +9,10 @@ $(() => {
   $('#change-password-form').on('submit', authEvents.onChangePassword)
   $('.sign-out-btn').on('click', authEvents.onSignOut)
   //
-  // $('.upload-area').on('submit', addItemEvents.onUpload)
-  // $('.get-all-item-btn').on('click', addItemEvents.onGetAllImages)
-  // $('.item-wall').on('click', '.item-remove-btn', addItemEvents.onDeleteImage)
-  // $('.item-wall').on('submit', '.description-update', addItemEvents.onCaptionUpdate)
+  $('.upload-area').on('submit', addItemEvents.onUpload)
+  $('.get-all-item-btn').on('click', addItemEvents.onGetAllItems)
+  $('.item-wall').on('click', '.item-remove-btn', addItemEvents.onDeleteItem)
+  $('.item-wall').on('submit', '.description-update', addItemEvents.onTextUpdate)
 
   $('.navbar-toggler').click(function () {
     $('.input-field').val('')

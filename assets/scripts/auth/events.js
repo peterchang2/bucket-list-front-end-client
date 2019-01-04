@@ -25,10 +25,15 @@ const onSignIn = function (event) {
 const onChangePassword = function (event) {
   event.preventDefault()
   const userData = getFormFields(event.target)
-  $(event.target).trigger('reset')
-  api.changePassword(userData)
-    .then(ui.changePasswordSuccess)
-    .catch(ui.failure)
+  if ($('.old-Pass').val() === $('.new-Pass').val()) {
+    $(event.target).trigger('reset')
+    ui.changePassFailure()
+  } else {
+    $(event.target).trigger('reset')
+    api.changePassword(userData)
+      .then(ui.changePasswordSuccess)
+      .catch(ui.failure)
+  }
 }
 const onSignOut = function (event) {
   event.preventDefault()
