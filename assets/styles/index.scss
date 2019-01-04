@@ -6,6 +6,14 @@
   display: none;
 }
 
+.success-message {
+  color: #2cb42c; // bright-green
+}
+
+.error-message {
+  color: red;
+}
+
 .navbar,
 .user-panel {
   background-color: $navbar-maroon;
@@ -22,6 +30,17 @@
 .get-image-by-id-btn {
   border-color: $button-blue;
   color: $button-blue;
+}
+
+.sign-out-btn,
+.chg-pass-btn,
+.get-all-item-btn,
+.delete-image-btn,
+.delete-image-form,
+.sign-in-form,
+.sign-up-form,
+.change-password-form {
+  display: none;
 }
 
 .site-name {
