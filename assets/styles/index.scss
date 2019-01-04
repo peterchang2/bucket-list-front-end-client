@@ -2,12 +2,26 @@
 @import 'colors.scss';
 @import url('https://fonts.googleapis.com/css?family=Arvo|Varela+Round');
 
+.hidden {
+  display: none;
+}
+
 .navbar,
 .user-panel {
   background-color: $navbar-maroon;
   legend {
     color: white;
   }
+}
+
+.sign-in-btn,
+.sign-up-btn,
+.sign-out-btn,
+.chg-pass-btn,
+.get-all-image-btn,
+.get-image-by-id-btn {
+  border-color: $button-blue;
+  color: $button-blue;
 }
 
 .site-name {
