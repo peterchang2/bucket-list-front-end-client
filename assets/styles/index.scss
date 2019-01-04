@@ -1,1 +1,11 @@
 @import '~bootstrap/scss/bootstrap';
+@import url('https://fonts.googleapis.com/css?family=Arvo|Varela+Round');
+
+.navbar,
+.user-panel {
+  background-color: #3c2a3b;
+}
+
+.site-name {
+  font-family: 'Arvo', serif;
+}
