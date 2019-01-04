@@ -41,10 +41,10 @@ const captionUpdate = function (id, caption) {
   })
 }
 
-const getAllImages = function (inputData) {
+const getAllItems = function (inputData) {
   return $.ajax({
     method: 'GET',
-    url: config.apiUrl + '/images/',
+    url: config.apiUrl + '/items/',
     contentType: 'application/json',
     headers: {
       Authorization: `Token token=${store.user.token}`
@@ -109,7 +109,7 @@ const deleteImageById = function (id) {
 module.exports = {
   upload,
   getImageId,
-  getAllImages,
+  getAllItems,
   deleteImageById,
   captionUpdate
 }

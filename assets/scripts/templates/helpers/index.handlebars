@@ -1,12 +1,12 @@
-{{#each this as |images|}}
-  {{#images}}
-      <div class="image-url" data-id={{id}}>
-        <img src='{{url}}'> <h4>ID:{{id}} -- {{date}} -- {{caption}}</h4>
-        <form class="caption-update" data-id={{id}}>
-          <input required minlength='1' class="update-caption-form-{{id}}" type="text" placeholder="New Caption" data-id={{id}}>
-          <input class="update-caption-btn" type="submit" name="images[caption]" value="Update" data-id={{id}}>
+{{#each this as |items|}}
+  {{#items}}
+      <div class="all-items" data-id={{id}}>
+        <h4>{{title}} -- {{text}}</h4>
+        <form class="text-update" data-id={{id}}>
+          <input required minlength='1' class="update-text-form-{{id}}" type="text" placeholder="New Caption" data-id={{id}}>
+          <input class="update-text-btn" type="submit" name="item[text]" value="Update" data-id={{id}}>
         </form>
-        <button type="button" name="remove" class="image-remove-btn">Remove</button>
+        <button type="button" name="remove" class="item-remove-btn">Remove</button>
       </div>
-  {{/images}}
+  {{/items}}
 {{/each}}

@@ -35,8 +35,8 @@ const onGetAllItems = function (event) {
 const onTextUpdate = function (event) {
   event.preventDefault()
   const id = $(event.target).parent('div').data('id')
-  const caption = $('.update-caption-form-' + event.target.attributes['data-id'].value).val()
-  api.captionUpdate(id, caption)
+  const caption = $('.update-text-form-' + event.target.attributes['data-id'].value).val()
+  api.textUpdate(id, caption)
     .then(() => onGetAllItems(event))
   // .then(ui.captionUpdateSuccess)
     .catch(ui.failure)

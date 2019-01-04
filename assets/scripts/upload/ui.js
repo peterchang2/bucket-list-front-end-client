@@ -38,13 +38,13 @@ const getImageIdSuccess = function (imageSuccess) {
   store.imageid = imageSuccess.image.id
   // console.log(store.imageid)
   $('.upload-message-box').show(100)
-  $('.image-wall').html(`<img src="${imageSuccess.image.url}">`)
+  $('.item-wall').html(`<img src="${imageSuccess.image.url}">`)
   $('.upload-message-box').removeClass('error-message')
   $('.upload-message-box').addClass('success-message')
 }
 
 const getAllItemsSuccess = function (getItemSuccess) {
-  $('.image-wall').empty()
+  $('.item-wall').empty()
   if (getItemSuccess.items.length === 0) {
     $('.upload-message-box').show(100)
     $('.upload-message-box').html(`Your Account Has No Items`)
@@ -55,15 +55,8 @@ const getAllItemsSuccess = function (getItemSuccess) {
     }, 3000)
   } else {
     getItemSuccess.items.forEach((x) => {
-    // console.log((x.url).includes('.jpg'))
-      if ((x.url).includes('.jpg') || (x.url).includes('.png')) {
-        const index = handle({ images: getItemSuccess.items })
-        $('.image-wall').html(index)
-      }
-      // else if ((x.url).includes('.gifv') || (x.url).includes('.mp4')) {
-      //   const index2 = handle2({ gifs: getImageSuccess.images })
-      //   $('.gif-wall').html(index2)
-      // }
+      const index = handle({ items: getItemSuccess.items })
+      $('.item-wall').html(index)
     })
   }
 }
