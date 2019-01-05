@@ -44,14 +44,6 @@ $(() => {
     $('.get-image-by-id-form').fadeOut(200)
   })
 
-  // $('.get-image-by-id-btn').click(function () {
-  //   setTimeout(function () {
-  //     $('.get-image-by-id-form').fadeToggle()
-  //     $('.input-field').val('')
-  //   }, 200)
-  //   $('.change-password-form').fadeOut(200)
-  // })
-
   $('.get-all-item-btn').click(function () {
     $('.change-password-form').fadeOut(200)
   })

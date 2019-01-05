@@ -51,17 +51,6 @@ const onTitleUpdate = function (event) {
     .catch(ui.failure)
 }
 
-// const onGetImage = function (event) {
-//   event.preventDefault()
-//   const imageData = getFormFields(event.target)
-//   $(event.target).trigger('reset')
-//   const imageId = imageData.images.id
-//   console.log(imageId)
-//   api.getImageId(imageId)
-//     .then(ui.getImageIdSuccess)
-//     .catch(ui.idFailure)
-// }
-
 const onDeleteItem = function (event) {
   event.preventDefault()
   const _id = $(event.target).parents('div').data('id')
