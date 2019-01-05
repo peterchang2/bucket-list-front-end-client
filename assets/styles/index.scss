@@ -6,6 +6,14 @@
   display: none;
 }
 
+.block {
+  display: block;
+}
+
+.strike {
+  text-decoration: line-through;
+}
+
 .success-message {
   color: #2cb42c; // bright-green
 }
@@ -45,4 +53,10 @@
 
 .site-name {
   font-family: 'Arvo', serif;
+}
+
+.upload-section,
+.item-wall {
+  width: 100%;
+  text-align: center;
 }

@@ -70,10 +70,20 @@ const onDeleteItem = function (event) {
     .catch(ui.failure)
 }
 
+const onCompleteItem = function (event) {
+  event.preventDefault()
+  const _id = $(event.target).parents('div').data('id')
+  api.completeItemById(_id)
+    // .then(ui.completedItemCross)
+    .then(() => onGetAllItems(event))
+    .catch(ui.failure)
+}
+
 module.exports = {
   onUpload,
   onGetAllItems,
   onDeleteItem,
+  onCompleteItem,
   onTextUpdate,
   onTitleUpdate
 }

@@ -1,5 +1,7 @@
 //
 const handle = require('../templates/helpers/index.handlebars')
+const handle2 = require('../templates/helpers/index2.handlebars')
+
 // const handle2 = require('../templates/helpers/index2.handlebars')
 const store = require('../store.js')
 // const events = require('./events.js')
@@ -54,22 +56,34 @@ const getAllItemsSuccess = function (getItemSuccess) {
       $('.upload-message-box').fadeOut(200).empty(200)
     }, 3000)
   } else {
-    getItemSuccess.items.forEach((x) => {
-      const index = handle({ items: getItemSuccess.items })
-      $('.item-wall').html(index)
+    const index = handle({ items: getItemSuccess.items })
+    $('.item-wall').html(index)
+    getItemSuccess.items.forEach(function (x) {
+      if (x.completed === false) {
+        console.log(x)
+        $('.blah-' + x._id).removeClass('strike')
+      }
     })
   }
 }
 
-const deleteImageIdSuccess = function (deleteImageSuccess) {
-  $('.upload-message-box').show(100)
-  $('.upload-message-box').html(`Image Successfully Deleted`)
-  $('.upload-message-box').removeClass('error-message')
-  $('.upload-message-box').addClass('success-message')
-  setTimeout(function () {
-    $('.upload-message-box').fadeOut(200).empty(200)
-  }, 2500)
+const completedItemCross = function (completeSuccess) {
+  if (completeSuccess.item.completed === true) {
+    const index2 = handle({ item: completeSuccess.item })
+    $('.item-wall').html(index2)
+    $('.blah').addClass('strike')
+  }
 }
+
+// const deleteImageIdSuccess = function (deleteImageSuccess) {
+//   $('.upload-message-box').show(100)
+//   $('.upload-message-box').html(`Image Successfully Deleted`)
+//   $('.upload-message-box').removeClass('error-message')
+//   $('.upload-message-box').addClass('success-message')
+//   setTimeout(function () {
+//     $('.upload-message-box').fadeOut(200).empty(200)
+//   }, 2500)
+// }
 
 module.exports = {
   failure,
@@ -77,5 +91,6 @@ module.exports = {
   uploadSuccess,
   getImageIdSuccess,
   getAllItemsSuccess,
-  deleteImageIdSuccess
+  completedItemCross
+  // deleteImageIdSuccess
 }
