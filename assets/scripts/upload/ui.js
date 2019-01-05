@@ -42,6 +42,12 @@ const getImageIdSuccess = function (imageSuccess) {
 }
 
 const getAllItemsSuccess = function (getItemSuccess) {
+  // console.log(getItemSuccess)
+  // getItemSuccess.items.forEach((x) => {
+  //   debugger
+  //   console.log(x.owner)
+  // })
+  // console.log(store.user)
   $('.item-wall').empty()
   if (getItemSuccess.items.length === 0) {
     $('.upload-message-box').show(100)
@@ -56,7 +62,6 @@ const getAllItemsSuccess = function (getItemSuccess) {
     $('.item-wall').html(index)
     getItemSuccess.items.forEach(function (x) {
       if (x.completed === false) {
-        console.log(x)
         $('.blah-' + x._id).removeClass('strike')
       }
     })

@@ -2,6 +2,9 @@
 @import 'colors.scss';
 @import url('https://fonts.googleapis.com/css?family=Arvo|Varela+Round');
 
+* {
+  font-family: 'Varela Round', sans-serif;
+}
 .hidden {
   display: none;
 }
@@ -22,6 +25,13 @@
   color: red;
 }
 
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  background-color: #c7dbf4; //light-blue background on focus
+}
+
 .navbar,
 .user-panel {
   background-color: $navbar-maroon;
@@ -34,8 +44,7 @@
 .sign-up-btn,
 .sign-out-btn,
 .chg-pass-btn,
-.get-all-image-btn,
-.get-image-by-id-btn {
+.get-all-item-btn {
   border-color: $button-blue;
   color: $button-blue;
 }
@@ -57,6 +66,14 @@
 
 .upload-section,
 .item-wall {
-  width: 100%;
+  width: 65%;
+  margin: 0 auto;
   text-align: center;
 }
+
+.upload-area {
+  margin-top: 10px;
+}
+.disclaimer {
+    font-size: 16px;
+  }
