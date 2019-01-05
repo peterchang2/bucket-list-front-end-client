@@ -58,6 +58,24 @@ const titleUpdate = function (_id, title) {
   })
 }
 
+const completeItemById = function (_id, title) {
+  return $.ajax({
+    method: 'PATCH',
+    url: config.apiUrl + `/items/${_id}`,
+    contentType: 'application/json',
+    headers: {
+      Authorization: `Token token=${store.user.token}`
+    },
+    data: JSON.stringify(
+      {
+        'item': {
+          'completed': true,
+          'user_id': store.user.id
+        }
+      })
+  })
+}
+
 const getAllItems = function (inputData) {
   return $.ajax({
     method: 'GET',
@@ -67,6 +85,17 @@ const getAllItems = function (inputData) {
       Authorization: `Token token=${store.user.token}`
     },
     data: JSON.stringify(inputData)
+  })
+}
+
+const deleteItemById = function (_id) {
+  return $.ajax({
+    method: 'DELETE',
+    url: config.apiUrl + `/items/${_id}`,
+    contentType: 'application/json',
+    headers: {
+      Authorization: `Token token=${store.user.token}`
+    }
   })
 }
 
@@ -80,17 +109,6 @@ const getAllItems = function (inputData) {
 //     }
 //   })
 // }
-
-const deleteItemById = function (_id) {
-  return $.ajax({
-    method: 'DELETE',
-    url: config.apiUrl + `/items/${_id}`,
-    contentType: 'application/json',
-    headers: {
-      Authorization: `Token token=${store.user.token}`
-    }
-  })
-}
 
 // const signIn = function (inputData) {
 //   return $.ajax({
@@ -127,6 +145,7 @@ module.exports = {
   upload,
   getAllItems,
   deleteItemById,
+  completeItemById,
   textUpdate,
   titleUpdate
 }
