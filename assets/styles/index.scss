@@ -5,6 +5,10 @@
 * {
   font-family: 'Varela Round', sans-serif;
 }
+
+body {
+  background-color: #faebd7;
+}
 .hidden {
   display: none;
 }
@@ -74,6 +78,17 @@ textarea:focus {
 .upload-area {
   margin-top: 10px;
 }
+
 .disclaimer {
     font-size: 16px;
+    margin-top: 10px;
+    color: #3e3d54;
+  }
+
+  .card {
+    background-color: #3e3d54;
+  }
+
+  h4 {
+    font-size: 20px;
   }

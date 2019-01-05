@@ -4,12 +4,12 @@ const store = require('../store.js')
 
 const failure = function (FailureResponse) {
   $('.upload-message-box').show(100)
-  $('.upload-message-box').html('Upload failed, Try Again')
+  $('.upload-message-box').html('Failed, Try Again')
   $('.upload-message-box').removeClass('success-message')
   $('.upload-message-box').addClass('error-message')
   setTimeout(function () {
     $('.upload-message-box').fadeOut(200).empty(200)
-  }, 2500)
+  }, 3000)
 }
 
 const idFailure = function (FailureResponse) {
@@ -24,22 +24,32 @@ const idFailure = function (FailureResponse) {
 
 const uploadSuccess = function (signUpResponse) {
   $('.upload-message-box').show(100)
-  $('.upload-message-box').html(`Image Successfully Uploaded`)
+  $('.upload-message-box').html(`Item Successfully Added`)
   $('.upload-message-box').removeClass('error-message')
   $('.upload-message-box').addClass('success-message')
   setTimeout(function () {
     $('.upload-message-box').fadeOut(200).empty(200)
-  }, 2500)
+  }, 3000)
 }
 
-const getImageIdSuccess = function (imageSuccess) {
-  store.imageid = imageSuccess.image.id
-  // console.log(store.imageid)
+const deleteSuccess = function (deleteResponse) {
   $('.upload-message-box').show(100)
-  $('.item-wall').html(`<img src="${imageSuccess.image.url}">`)
+  $('.upload-message-box').html(`Item Successfully Deleted`)
   $('.upload-message-box').removeClass('error-message')
   $('.upload-message-box').addClass('success-message')
+  setTimeout(function () {
+    $('.upload-message-box').fadeOut(200).empty(200)
+  }, 3000)
 }
+
+// const getImageIdSuccess = function (imageSuccess) {
+//   store.imageid = imageSuccess.image.id
+//   // console.log(store.imageid)
+//   $('.upload-message-box').show(100)
+//   $('.item-wall').html(`<img src="${imageSuccess.image.url}">`)
+//   $('.upload-message-box').removeClass('error-message')
+//   $('.upload-message-box').addClass('success-message')
+// }
 
 const getAllItemsSuccess = function (getItemSuccess) {
   // console.log(getItemSuccess)
@@ -51,7 +61,7 @@ const getAllItemsSuccess = function (getItemSuccess) {
   $('.item-wall').empty()
   if (getItemSuccess.items.length === 0) {
     $('.upload-message-box').show(100)
-    $('.upload-message-box').html(`Your Account Has No Dreams`)
+    $('.upload-message-box').html(`Your Account Has No More Dreams`)
     $('.upload-message-box').addClass('error-message')
     $('.upload-message-box').removeClass('success-message')
     setTimeout(function () {
@@ -80,7 +90,7 @@ module.exports = {
   failure,
   idFailure,
   uploadSuccess,
-  getImageIdSuccess,
+  deleteSuccess,
   getAllItemsSuccess,
   completedItemCross
 }

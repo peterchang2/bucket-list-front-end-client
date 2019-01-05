@@ -1,8 +1,8 @@
 {{#each this as |items|}}
   {{#items}}
-  <div class="card text-white bg-dark mb-3">
+  <div class="card text-white  mb-3">
       <div class="all-items" data-id="{{_id}}">
-        <h4 class="strike blah-{{_id}}" id="strike-{{_id}}">{{title}} -- {{text}}</h4>
+        <h4 class="strike blah-{{_id}}" id="strike-{{_id}}"><em>{{title}}</em><br> -- <i>{{text}}</i></h4>
         <form class="title-update" data-id="{{_id}}">
           <input required minlength='1' class="update-title-form-{{_id}}" type="text" placeholder="New Title" data-id="{{_id}}">
           <input class="update-title-btn" type="submit" name="item[title]" value="Update" data-id="{{_id}}">
