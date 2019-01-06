@@ -7,7 +7,7 @@
 }
 
 body {
-  background-color: #faebd7;
+  background-color: #bfb5b2;
 }
 .hidden {
   display: none;
@@ -29,11 +29,32 @@ body {
   color: red;
 }
 
+button:focus {
+  outline: none;
+}
+
+.btn-outline-warning:focus {
+  outline: none;
+  background-color: transparent;
+}
+
+.btn-outline-warning:hover,
+.btn-outline-warning::after,
+.btn-outline-warning:not(:disabled):not(.disabled):active,
+.btn-outline-warning:active,
+.btn-outline-warning:visited {
+  box-shadow: none !important;
+  outline: 0 none;
+  background-color: rgba(131,173,181,0.3);
+  color:  rgb(193,214,218);
+  border-color: rgb(193,214,218);
+}
+
 input:focus,
 select:focus,
 textarea:focus {
   outline: none;
-  background-color: #c7dbf4; //light-blue background on focus
+  background-color: rgba(131,173,181,0.3); //light-blue background on focus
 }
 
 .navbar,
@@ -41,8 +62,34 @@ textarea:focus {
   background-color: $navbar-maroon;
   legend {
     color: white;
+    margin: 5px;
   }
 }
+
+.user-panel {
+  display: inline-block;
+  text-align: right;
+  width: 100%;
+}
+
+.input-field {
+    background-color: transparent;
+    color: white;
+    // border-radius: 5px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+  }
+
+.form-btn {
+    background-color: #4CAF50; /* Green */
+    height: 30px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+  }
 
 .sign-in-btn,
 .sign-up-btn,

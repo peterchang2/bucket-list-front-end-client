@@ -5,11 +5,11 @@
         <h4 class="strike blah-{{_id}}" id="strike-{{_id}}"><em>{{title}}</em><br> -- <i>{{text}}</i></h4>
         <form class="title-update" data-id="{{_id}}">
           <input required minlength='1' class="update-title-form-{{_id}}" type="text" placeholder="New Title" data-id="{{_id}}">
-          <input class="update-title-btn" type="submit" name="item[title]" value="Update" data-id="{{_id}}">
+          <input class="form-btn update-title-btn" type="submit" name="item[title]" value="Update" data-id="{{_id}}">
         </form>
         <form class="text-update" data-id="{{_id}}">
           <input required minlength='1' class="update-text-form-{{_id}}" type="text" placeholder="New Description" data-id="{{_id}}">
-          <input class="update-text-btn" type="submit" name="item[text]" value="Update" data-id="{{_id}}">
+          <input class="form-btn update-text-btn" type="submit" name="item[text]" value="Update" data-id="{{_id}}">
         </form>
         <button type="button" name="remove" class="item-remove-btn">Remove</button>
         <button type="button" name="complete" class="item-complete-btn">Completed</button>
