@@ -6,13 +6,20 @@
 
 # Links
 
-* [Bucket List Front End Client](https://github.com/WDI-28-peter-kwesi-lucas/bucket-list-front-end-client/)
+* [Bucket List Back End API](https://github.com/WDI-28-peter-kwesi-lucas/bucket-list-back-end-api/)
 * [Heroku](https://secure-bastion-12965.herokuapp.com/)
 
 # Wireframes
 
 * [Wireframes](https://i.imgur.com/7THkF3o.jpg)
 
+# List of technologies used
+
+* HTML
+* CSS
+* JavaScript
+* jQuery
+* Ajax
 
 # API Routes and Paths
 
