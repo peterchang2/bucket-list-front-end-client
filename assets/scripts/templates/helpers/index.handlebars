@@ -6,19 +6,21 @@
 
         <div class="lala-{{_id}} hidden" data-id="{{_id}}">
           <form class="title-update " data-id="{{_id}}">
-            <input required minlength='1' maxlength="150" class="update-title-form-{{_id}}" type="text" placeholder="New Title" data-id="{{_id}}">
+            <input required minlength='1' maxlength="150" class="input-field update-title-form-{{_id}}" type="text" placeholder="New Title" data-id="{{_id}}">
             <input class="form-btn update-title-btn" type="submit" name="item[title]" value="Update" data-id="{{_id}}">
           </form>
 
           <form class="text-update " data-id="{{_id}}">
-            <input required minlength='1' maxlength="150" class="update-text-form-{{_id}}" type="text" placeholder="New Description" data-id="{{_id}}">
+            <input required minlength='1' maxlength="150" class="input-field update-text-form-{{_id}}" type="text" placeholder="New Description" data-id="{{_id}}">
             <input class="form-btn update-text-btn" type="submit" name="item[text]" value="Update" data-id="{{_id}}">
           </form>
         </div>
 
-        <button type="button" name="button" class="item-update-btn" data-id={{_id}}>Update Your Dream</button>
-        <button type="button" name="remove" class="item-remove-btn">Remove</button>
-        <button type="button" name="complete" class="item-complete-btn">Completed</button>
+        <div class="btn-group" data-id="{{_id}}">
+          <button type="button" name="button" class="item-update-btn" data-id={{_id}}>Update Your Dream</button>
+          <button type="button" name="remove" class="item-remove-btn">Remove</button>
+          <button type="button" name="complete" class="item-complete-btn">Completed</button>
+        </div>
 
       </div>
     </div>

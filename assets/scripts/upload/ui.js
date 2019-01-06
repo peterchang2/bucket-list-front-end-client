@@ -43,8 +43,6 @@ const deleteSuccess = function (deleteResponse) {
 }
 
 const getAllItemsSuccess = function (getItemSuccess) {
-
-
   $('.item-wall').empty()
   if (getItemSuccess.items.length === 0) {
     $('.upload-message-box').show(100)
@@ -64,22 +62,25 @@ const getAllItemsSuccess = function (getItemSuccess) {
     })
   }
   $('.item-update-btn').click(function () {
-    debugger
-    $('.lala-' + event.target.attributes['data-id'].value).removeClass('hidden')
+    $('.lala-' + event.target.attributes['data-id'].value).fadeToggle(200)
   })
-  // $('.item-update-btn').on('click', function () {
-  //   $('.title-update' + event.target.attributes['data-id'].value).removeClass('hidden')
-  //   $('.text-update' + event.target.attributes['data-id'].value).removeClass('hidden')
-  // })
+  $('.item-complete-btn').click(function () {
+    $('.upload-message-box').html('CONGRATS')
+    $('.upload-message-box').removeClass('error-message')
+    $('.upload-message-box').addClass('success-message')
+    setTimeout(function () {
+      $('.upload-message-box').fadeOut(200).empty(200)
+    }, 5000)
+  })
 }
 
-const completedItemCross = function (completeSuccess) {
-  if (completeSuccess.item.completed === true) {
-    const index2 = handle({ item: completeSuccess.item })
-    $('.item-wall').html(index2)
-    $('.blah').addClass('strike')
-  }
-}
+// const completedItemCross = function (completeSuccess) {
+//   if (completeSuccess.item.completed === true) {
+//     const index2 = handle({ item: completeSuccess.item })
+//     $('.item-wall').html(index2)
+//     $('.blah').addClass('strike')
+//   }
+// }
 
 module.exports = {
   failure,
@@ -87,5 +88,5 @@ module.exports = {
   uploadSuccess,
   deleteSuccess,
   getAllItemsSuccess,
-  completedItemCross
+  // completedItemCross
 }
