@@ -42,22 +42,9 @@ const deleteSuccess = function (deleteResponse) {
   }, 3000)
 }
 
-// const getImageIdSuccess = function (imageSuccess) {
-//   store.imageid = imageSuccess.image.id
-//   // console.log(store.imageid)
-//   $('.upload-message-box').show(100)
-//   $('.item-wall').html(`<img src="${imageSuccess.image.url}">`)
-//   $('.upload-message-box').removeClass('error-message')
-//   $('.upload-message-box').addClass('success-message')
-// }
-
 const getAllItemsSuccess = function (getItemSuccess) {
-  // console.log(getItemSuccess)
-  // getItemSuccess.items.forEach((x) => {
-  //   debugger
-  //   console.log(x.owner)
-  // })
-  // console.log(store.user)
+
+
   $('.item-wall').empty()
   if (getItemSuccess.items.length === 0) {
     $('.upload-message-box').show(100)
@@ -76,6 +63,14 @@ const getAllItemsSuccess = function (getItemSuccess) {
       }
     })
   }
+  $('.item-update-btn').click(function () {
+    debugger
+    $('.lala-' + event.target.attributes['data-id'].value).removeClass('hidden')
+  })
+  // $('.item-update-btn').on('click', function () {
+  //   $('.title-update' + event.target.attributes['data-id'].value).removeClass('hidden')
+  //   $('.text-update' + event.target.attributes['data-id'].value).removeClass('hidden')
+  // })
 }
 
 const completedItemCross = function (completeSuccess) {

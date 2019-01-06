@@ -15,6 +15,7 @@ $(() => {
   $('.item-wall').on('submit', '.title-update', addItemEvents.onTitleUpdate)
   $('.item-wall').on('click', '.item-remove-btn', addItemEvents.onDeleteItem)
   $('.item-wall').on('click', '.item-complete-btn', addItemEvents.onCompleteItem)
+  // $('.item-wall').on('click', '.item-update-btn', addItemEvents.onGetAllItems)
 
   $('.navbar-toggler').click(function () {
     $('.input-field').val('')
