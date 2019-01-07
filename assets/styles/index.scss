@@ -93,6 +93,19 @@ textarea:focus {
     text-decoration: none;
   }
 
+  .item-btn {
+    font-size: 14px;
+    background-color: #4CAF50; /* Green */
+    height: 25px;
+    border: none;
+    // border-style: groove;
+    border-color: white;
+    border-radius: 5px;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+  }
+
 .sign-in-btn,
 .sign-up-btn,
 .sign-out-btn,
@@ -135,6 +148,7 @@ textarea:focus {
 .disclaimer {
     font-size: 16px;
     margin-top: 10px;
+    // margin-bottom: 20px;
     color: #3e3d54;
   }
 
@@ -171,4 +185,11 @@ textarea:focus {
   .item-remove-btn,
   .item-complete-btn {
     margin: 0 5px 0 5px;
+  }
+
+  .upload-message-box {
+    width: 100%;
+    position: relative;
+    text-align: center;
+    margin: 0 auto;
   }
