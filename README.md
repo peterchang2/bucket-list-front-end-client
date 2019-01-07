@@ -22,3 +22,7 @@
 * jQuery
 * Ajax
 * Handlebars
+
+# Unsolved problems
+
+# Planning, process, and problem-solving strategies
