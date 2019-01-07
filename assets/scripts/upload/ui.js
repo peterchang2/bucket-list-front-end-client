@@ -1,6 +1,6 @@
 //
 const handle = require('../templates/helpers/index.handlebars')
-const store = require('../store.js')
+// const store = require('../store.js')
 
 const failure = function (FailureResponse) {
   $('.upload-message-box').show(100)
@@ -56,6 +56,7 @@ const getAllItemsSuccess = function (getItemSuccess) {
     const index = handle({ items: getItemSuccess.items })
     $('.item-wall').html(index)
     getItemSuccess.items.forEach(function (x) {
+      // console.log(x.completed)
       if (x.completed === false) {
         $('.blah-' + x._id).removeClass('strike')
       }
@@ -64,23 +65,24 @@ const getAllItemsSuccess = function (getItemSuccess) {
   $('.item-update-btn').click(function () {
     $('.lala-' + event.target.attributes['data-id'].value).fadeToggle(200)
   })
-  $('.item-complete-btn').click(function () {
-    $('.upload-message-box').html('CONGRATS')
-    $('.upload-message-box').removeClass('error-message')
-    $('.upload-message-box').addClass('success-message')
-    setTimeout(function () {
-      $('.upload-message-box').fadeOut(200).empty(200)
-    }, 5000)
-  })
+
+  // $('.item-complete-btn').click(function () {
+  //   $('.upload-message-box').html('CONGRATS')
+  //   $('.upload-message-box').removeClass('error-message')
+  //   $('.upload-message-box').addClass('success-message')
+  //   setTimeout(function () {
+  //     $('.upload-message-box').fadeOut(200).empty(200)
+  //   }, 5000)
+  // })
 }
 
-// const completedItemCross = function (completeSuccess) {
-//   if (completeSuccess.item.completed === true) {
-//     const index2 = handle({ item: completeSuccess.item })
-//     $('.item-wall').html(index2)
-//     $('.blah').addClass('strike')
-//   }
-// }
+const completedItemCross = function (completeSuccess) {
+  if (completeSuccess.item.completed === true) {
+    const index2 = handle({ item: completeSuccess.item })
+    $('.item-wall').html(index2)
+    $('.blah').addClass('strike')
+  }
+}
 
 module.exports = {
   failure,
@@ -88,5 +90,5 @@ module.exports = {
   uploadSuccess,
   deleteSuccess,
   getAllItemsSuccess,
-  // completedItemCross
+  completedItemCross
 }
