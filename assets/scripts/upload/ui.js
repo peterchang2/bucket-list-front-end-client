@@ -56,13 +56,12 @@ const getAllItemsSuccess = function (getItemSuccess) {
     const index = handle({ items: getItemSuccess.items })
     $('.item-wall').html(index)
     getItemSuccess.items.forEach(function (x) {
-      console.log(x)
       if (x.completed === false) {
         $('.blah-' + x._id).removeClass('strike')
       } if (x.completed === true) {
         $('.item-update-btn-' + x._id).hide()
         // $('.item-update-btn').attr('disabled', true)
-        $('.upload-message-box').html(`You Can Not Update A Crossed Off Item`)
+        // $('.upload-message-box').html(`You Can Not Update A Crossed Off Item`)
       }
     })
   }

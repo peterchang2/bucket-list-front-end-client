@@ -56,7 +56,7 @@ const signUpSuccess = function (signUpResponse) {
 const signInSuccess = function (signInResponse) {
   store.user = signInResponse.user
   $('.message-box').show(100)
-  $('.user-name').html(`${signInResponse.user.email}'s Life and Dream`)
+  $('.user-name').html(`${signInResponse.user.email}'s Life and Dreams`)
   $('.message-box').html('You Signed In Successfully')
   $('.message-box').removeClass('error-message')
   $('.message-box').addClass('success-message')
