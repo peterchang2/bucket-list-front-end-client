@@ -76,19 +76,19 @@ const getAllItemsSuccess = function (getItemSuccess) {
   // })
 }
 
-const completedItemCross = function (completeSuccess) {
-  if (completeSuccess.item.completed === true) {
-    const index2 = handle({ item: completeSuccess.item })
-    $('.item-wall').html(index2)
-    $('.blah').addClass('strike')
-  }
-}
+// const completedItemCross = function (completeSuccess) {
+//   if (completeSuccess.item.completed === true) {
+//     const index2 = handle({ item: completeSuccess.item })
+//     $('.item-wall').html(index2)
+//     $('.blah').addClass('strike')
+//   }
+// }
 
 module.exports = {
   failure,
   idFailure,
   uploadSuccess,
   deleteSuccess,
-  getAllItemsSuccess,
-  completedItemCross
+  getAllItemsSuccess
+  // completedItemCross
 }

@@ -8,7 +8,7 @@ $(() => {
   $('#sign-in-form').on('submit', authEvents.onSignIn)
   $('#change-password-form').on('submit', authEvents.onChangePassword)
   $('.sign-out-btn').on('click', authEvents.onSignOut)
-  //
+
   $('.upload-area').on('submit', addItemEvents.onUpload)
   $('.get-all-item-btn').on('click', addItemEvents.onGetAllItems)
   $('.item-wall').on('submit', '.text-update', addItemEvents.onTextUpdate)
