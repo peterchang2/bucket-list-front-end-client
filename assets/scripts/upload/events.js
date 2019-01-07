@@ -42,6 +42,7 @@ const onTextUpdate = function (event) {
   // .then(ui.captionUpdateSuccess)
     .catch(ui.failure)
 }
+
 const onTitleUpdate = function (event) {
   event.preventDefault()
   const id = $(event.target).parent('div').data('id')
