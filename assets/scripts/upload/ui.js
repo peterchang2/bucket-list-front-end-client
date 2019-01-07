@@ -60,6 +60,7 @@ const getAllItemsSuccess = function (getItemSuccess) {
         $('.blah-' + x._id).removeClass('strike')
       } if (x.completed === true) {
         $('.item-update-btn-' + x._id).hide()
+        $('.item-complete-btn-' + x._id).hide()
         // $('.item-update-btn').attr('disabled', true)
         // $('.upload-message-box').html(`You Can Not Update A Crossed Off Item`)
       }
