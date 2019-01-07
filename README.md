@@ -20,3 +20,4 @@
 * JavaScript
 * jQuery
 * Ajax
+* Handlebars
