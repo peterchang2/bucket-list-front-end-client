@@ -1,17 +1,78 @@
 <!DOCTYPE html>
 <html>
     <head>
-      <title>Example</title>
+      <title>Life and Dreams Bucket List</title>
       <meta name="viewport" content="width=device-width, initial-scale=1">
 
       <!-- Do not add `link` tags-->
       <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+      <link rel="icon" type="image/png" sizes="32x32" href="paint-bucket.png">
 
       <!-- Do not add `script` tags-->
       <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body>
-      <h1>Browser Template</h1>
+      <div class="pos-f-t">
+        <div class="collapse" id="navbarToggleExternalContent">
+          <div class=" p-4 user-panel">
+            <h5 class="text-white h4 user-panel-name"><span class="user-name"></span></h5>
+
+            <button type="button" class="btn btn-outline-warning sign-in-btn">Sign-In</button>
+            <button type="button" class="btn btn-outline-warning sign-up-btn">Sign-Up</button>
+            <button type="button" class="btn btn-outline-warning sign-out-btn">Sign-Out</button>
+            <button type="button" class="btn btn-outline-warning chg-pass-btn">Change-Password</button>
+            <button type="button" class="btn btn-outline-warning get-all-item-btn">Show-All</button>
+            <!-- <button type="button" class="btn btn-outline-warning get-image-by-id-btn">Get-ID</button> -->
+            <!-- <button type="button" class="btn btn-outline-warning delete-image-btn">Delete</button> -->
+            <span class="text-muted"></span>
+
+            <div class="auth-form" id="auth-form">
+               <form class="sign-up-form" id="sign-up-form">
+                <legend>Sign-Up</legend>
+                <input class='input-field style' type="email" name="credentials[email]" placeholder="Email">
+                <input class='input-field pass style' type="password" name="credentials[password]" required minlength='6' placeholder="PWD- 6 min chars">
+                <input class='input-field confirmpass style' type="password" name="credentials[password_confirmation]" required minlength='6' placeholder="Confirm PW">
+                <input class='form-btn' type="submit" value="Sign-Up">
+              </form>
+              <form class="sign-in-form input-field" id="sign-in-form">
+                <legend>Sign-In</legend>
+                <input class='input-field style' type="email" name="credentials[email]" placeholder="Email">
+                <input class='input-field style' type="password" name="credentials[password]" placeholder="Password">
+                <input class='form-btn' type="submit" value="Sign-In">
+              </form>
+              <form class="change-password-form input-field" id="change-password-form" >
+               <legend>Change-Password</legend>
+                <input class='input-field old-Pass style' type="password" name="passwords[old]" placeholder="Old Password">
+                <input class='input-field new-Pass style' type="password" name="passwords[new]" placeholder="New Password">
+                <input class='form-btn' type="submit" value="Change">
+              </form>
+            </div>
+
+            <div class="message-box"></div>
+
+          </div>
+        </div>
+        <nav class="navbar navbar-dark">
+         <h5 class="text-white h4 site-name">Life and Dreams</h5>
+         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+           <span class="navbar-toggler-icon"></span>
+         </button>
+       </nav>
+     </div>
+
+     <div class="upload-section hidden">
+        <form action="" class="upload-area" data-id='store.user.id'>
+          <input class='location' type="text" name="item[title]" placeholder="Title">
+          <input class='location' type="text" name="item[text]" placeholder="Description">
+          <input class='location add-btn submit' type="submit" value="Add">
+          <h2 class="disclaimer">What is your bucket list? Give it a title and short description.</h2>
+          <span class="upload-message-box"></span>
+        </form>
+      </div>
+      <hr>
+
+      <div class="item-wall"></div>
+
     </body>
 </html>
