@@ -20,6 +20,7 @@ const onUpload = function (event) {
     // console.log('this is uploadData', uploadData.images.date)
     $(event.target).trigger('reset')
     api.upload(uploadData.item.title, uploadData.item.text)
+      .then(ui.uploadSuccess)
       .then(() => onGetAllItems(event))
       .catch(ui.failure)
   }
@@ -55,6 +56,7 @@ const onDeleteItem = function (event) {
   event.preventDefault()
   const _id = $(event.target).parents('div').data('id')
   api.deleteItemById(_id)
+    .then(ui.deleteSuccess)
     .then(() => onGetAllItems(event))
     .catch(ui.failure)
 }

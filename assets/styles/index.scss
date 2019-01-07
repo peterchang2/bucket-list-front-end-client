@@ -2,6 +2,13 @@
 @import 'colors.scss';
 @import url('https://fonts.googleapis.com/css?family=Arvo|Varela+Round');
 
+* {
+  font-family: 'Varela Round', sans-serif;
+}
+
+body {
+  background-color: #bfb5b2;
+}
 .hidden {
   display: none;
 }
@@ -22,20 +29,73 @@
   color: red;
 }
 
+button:focus {
+  outline: none;
+}
+
+.btn-outline-warning:focus {
+  outline: none;
+  background-color: transparent;
+}
+
+.btn-outline-warning:hover,
+.btn-outline-warning::after,
+.btn-outline-warning:not(:disabled):not(.disabled):active,
+.btn-outline-warning:active,
+.btn-outline-warning:visited {
+  box-shadow: none !important;
+  outline: 0 none;
+  background-color: rgba(131,173,181,0.3);
+  color:  rgb(193,214,218);
+  border-color: rgb(193,214,218);
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  background-color: rgba(131,173,181,0.3); //light-blue background on focus
+}
+
 .navbar,
 .user-panel {
   background-color: $navbar-maroon;
   legend {
     color: white;
+    margin: 5px;
   }
 }
+
+.user-panel {
+  display: inline-block;
+  text-align: right;
+  width: 100%;
+}
+
+.input-field {
+    background-color: transparent;
+    color: white;
+    // border-radius: 5px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+  }
+
+.form-btn {
+    background-color: #4CAF50; /* Green */
+    height: 30px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+  }
 
 .sign-in-btn,
 .sign-up-btn,
 .sign-out-btn,
 .chg-pass-btn,
-.get-all-image-btn,
-.get-image-by-id-btn {
+.get-all-item-btn {
   border-color: $button-blue;
   color: $button-blue;
 }
@@ -57,6 +117,56 @@
 
 .upload-section,
 .item-wall {
-  width: 100%;
+  width: 65%;
+  margin: 0 auto;
   text-align: center;
 }
+
+.upload-area {
+  margin-top: 10px;
+}
+
+.message-box {
+  margin-top: 10px;
+}
+
+.disclaimer {
+    font-size: 16px;
+    margin-top: 10px;
+    color: #3e3d54;
+  }
+
+  .card {
+    background-color: #3e3d54;
+  }
+
+  .list-title {
+    font-size: 18px;
+    text-transform: uppercase;
+  }
+
+  .list-text {
+    font-size: 16px;
+  }
+
+  .lala- {
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .title-update,
+  .text-update {
+    width: 50%;
+    margin: 5px auto 15px auto;
+  }
+
+  .btn-group {
+    margin-bottom: 5px;
+  }
+
+  .item-update-btn,
+  .item-remove-btn,
+  .item-complete-btn {
+    margin: 0 5px 0 5px;
+  }
