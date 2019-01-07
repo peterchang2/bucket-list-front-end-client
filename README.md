@@ -7,6 +7,7 @@
 # Links
 
 * [Bucket List Back End API](https://github.com/WDI-28-peter-kwesi-lucas/bucket-list-back-end-api/)
+* [Deployed Site](https://wdi-28-peter-kwesi-lucas.github.io/bucket-list-front-end-client/)
 * [Heroku](https://secure-bastion-12965.herokuapp.com/)
 
 # Wireframes
