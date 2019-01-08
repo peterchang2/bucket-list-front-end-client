@@ -104,13 +104,16 @@ textarea:focus {
     color: white;
     text-align: center;
     text-decoration: none;
+    margin: 0 5px 0 5px;
   }
 
 .sign-in-btn,
 .sign-up-btn,
 .sign-out-btn,
 .chg-pass-btn,
-.get-all-item-btn {
+.get-all-item-btn,
+.get-completed-item-btn,
+.get-incomplete-item-btn {
   border-color: $button-blue;
   color: $button-blue;
 }
@@ -122,7 +125,9 @@ textarea:focus {
 .delete-image-form,
 .sign-in-form,
 .sign-up-form,
-.change-password-form {
+.change-password-form,
+.get-completed-item-btn,
+.get-incomplete-item-btn {
   display: none;
 }
 
@@ -179,12 +184,6 @@ textarea:focus {
 
   .btn-group {
     margin-bottom: 5px;
-  }
-
-  .item-update-btn,
-  .item-remove-btn,
-  .item-complete-btn {
-    margin: 0 5px 0 5px;
   }
 
   .upload-message-box {

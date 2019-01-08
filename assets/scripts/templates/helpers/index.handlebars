@@ -1,7 +1,7 @@
 {{#each this as |items|}}
   {{#items}}
-  <div class="card text-white  mb-3" data-id="{{_id}}">
-      <div class="all-items" data-id="{{_id}}">
+  <div class="haha-{{_id}} card text-white  mb-3" data-id="{{_id}}">
+      <div class="all-items-{{_id}}" data-id="{{_id}}">
         <h4 class="strike blah-{{_id}}" id="strike-{{_id}}"><span class="list-title">{{title}}</span> : <span class="list-text">{{text}}</span></h4>
 
         <div class="lala-{{_id}} hidden" data-id="{{_id}}">
@@ -18,7 +18,7 @@
 
         <div class="btn-group" data-id="{{_id}}">
           <button type="button" name="button" class="xxx item-btn item-update-btn-{{_id}}" data-id={{_id}}>Update Your Dream</button>
-          <button type="button" name="remove" class="item-btn item-remove-btn" data-id={{_id}}>Delete Dream</button>
+          <button type="button" name="remove" class="item-btn item-remove-btn-{{_id}}" data-id={{_id}}>Delete Dream</button>
           <button type="button" name="complete" class="yyy item-btn item-complete-btn-{{_id}}" data-id={{_id}}>Cross Off Dream</button>
         </div>
 
