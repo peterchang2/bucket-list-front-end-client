@@ -71,7 +71,7 @@ const getAllItemsSuccess = function (getItemSuccess) {
 
 const getAllItemsSuccess2 = function (getItemSuccess) {
   $('.item-wall').empty()
-  console.log(getItemSuccess.items)
+  // console.log(getItemSuccess.items)
   if (getItemSuccess.items.length === 0) {
     $('.upload-message-box').show(100)
     $('.upload-message-box').html(`Your Account Has No More Dreams`)
@@ -102,7 +102,7 @@ const getAllItemsSuccess2 = function (getItemSuccess) {
 
 const getAllItemsSuccess3 = function (getItemSuccess) {
   $('.item-wall').empty()
-  console.log(getItemSuccess.items)
+  // console.log(getItemSuccess.items)
   if (getItemSuccess.items.length === 0) {
     $('.upload-message-box').show(100)
     $('.upload-message-box').html(`Your Account Has No More Dreams`)
