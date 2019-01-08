@@ -87,6 +87,9 @@ const getAllItemsSuccess2 = function (getItemSuccess) {
     getItemSuccess.items.forEach(function (x) {
       if (x.completed === false) {
         $('.blah-' + x._id).removeClass('strike')
+        $('.item-update-btn-' + x._id).hide()
+        $('.item-complete-btn-' + x._id).hide()
+        $('.item-remove-btn-' + x._id).hide()
       } if (x.completed === true) {
         $('.haha-' + x._id).remove()
       }
@@ -119,6 +122,7 @@ const getAllItemsSuccess3 = function (getItemSuccess) {
       } if (x.completed === true) {
         $('.item-update-btn-' + x._id).hide()
         $('.item-complete-btn-' + x._id).hide()
+        $('.item-remove-btn-' + x._id).hide()
       }
     })
   }

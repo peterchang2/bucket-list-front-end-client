@@ -104,6 +104,7 @@ textarea:focus {
     color: white;
     text-align: center;
     text-decoration: none;
+    margin: 0 5px 0 5px;
   }
 
 .sign-in-btn,
@@ -183,12 +184,6 @@ textarea:focus {
 
   .btn-group {
     margin-bottom: 5px;
-  }
-
-  .item-update-btn,
-  .item-remove-btn,
-  .item-complete-btn {
-    margin: 0 5px 0 5px;
   }
 
   .upload-message-box {
