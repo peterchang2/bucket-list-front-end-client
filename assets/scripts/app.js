@@ -15,7 +15,7 @@ $(() => {
   $('.get-completed-item-btn').on('click', addItemEvents.onGetAllItems3)
   $('.item-wall').on('submit', '.text-update', addItemEvents.onTextUpdate)
   $('.item-wall').on('submit', '.title-update', addItemEvents.onTitleUpdate)
-  $('.item-wall').on('click', '.item-remove-btn', addItemEvents.onDeleteItem)
+  $('.item-wall').on('click', '.zzz', addItemEvents.onDeleteItem)
   $('.item-wall').on('click', '.yyy', addItemEvents.onCompleteItem)
   // $('.item-wall').on('click', '.item-update-btn', addItemEvents.onGetAllItems)
 
