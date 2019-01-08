@@ -110,7 +110,9 @@ textarea:focus {
 .sign-up-btn,
 .sign-out-btn,
 .chg-pass-btn,
-.get-all-item-btn {
+.get-all-item-btn,
+.get-completed-item-btn,
+.get-incomplete-item-btn {
   border-color: $button-blue;
   color: $button-blue;
 }
@@ -122,7 +124,9 @@ textarea:focus {
 .delete-image-form,
 .sign-in-form,
 .sign-up-form,
-.change-password-form {
+.change-password-form,
+.get-completed-item-btn,
+.get-incomplete-item-btn {
   display: none;
 }
 

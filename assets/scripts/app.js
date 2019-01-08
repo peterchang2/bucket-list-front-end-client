@@ -11,6 +11,8 @@ $(() => {
 
   $('.upload-area').on('submit', addItemEvents.onUpload)
   $('.get-all-item-btn').on('click', addItemEvents.onGetAllItems)
+  $('.get-incomplete-item-btn').on('click', addItemEvents.onGetAllItems2)
+  $('.get-completed-item-btn').on('click', addItemEvents.onGetAllItems3)
   $('.item-wall').on('submit', '.text-update', addItemEvents.onTextUpdate)
   $('.item-wall').on('submit', '.title-update', addItemEvents.onTitleUpdate)
   $('.item-wall').on('click', '.item-remove-btn', addItemEvents.onDeleteItem)
