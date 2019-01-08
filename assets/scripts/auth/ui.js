@@ -99,6 +99,8 @@ const signOutSuccess = function () {
   $('.get-image-by-id-form').fadeOut(200)
   $('.sign-out-btn').hide()
   $('.get-all-item-btn').hide()
+  $('.get-completed-item-btn').hide()
+  $('.get-incomplete-item-btn').hide()
   $('.upload-section').removeClass('block')
   $('.upload-section').addClass('hidden')
   $('.item-wall').empty()
