@@ -55,6 +55,7 @@ const signUpSuccess = function (signUpResponse) {
 
 const signInSuccess = function (signInResponse) {
   store.user = signInResponse.user
+  $('.logo').hide()
   $('.message-box').show(100)
   $('.user-name').html(`${signInResponse.user.email}'s Life and Dreams`)
   $('.message-box').html('You Signed In Successfully')
@@ -89,6 +90,7 @@ const changePasswordSuccess = function (changePasswordResponse) {
 }
 
 const signOutSuccess = function () {
+  $('.logo').fadeIn(200)
   $('.message-box').show(100)
   $('.message-box').html('You Signed Out Successfully')
   $('.message-box').removeClass('error-message')

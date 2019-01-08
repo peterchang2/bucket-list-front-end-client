@@ -7,6 +7,11 @@
 }
 
 body {
+  background-image: url("public/logo_transparent.png");
+  background-position: center;
+  background-size: 40%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   background-color: #bfb5b2;
 }
 .hidden {
@@ -191,4 +196,17 @@ textarea:focus {
     position: relative;
     text-align: center;
     margin: 0 auto;
+  }
+
+  .logo {
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .bucket-logo {
+    text-align: center;
+    margin: 0 auto;
+    width: 650px;
+    height: 650px;
   }
