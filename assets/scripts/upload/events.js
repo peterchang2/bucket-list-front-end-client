@@ -33,6 +33,21 @@ const onGetAllItems = function (event) {
     .catch(ui.failure)
 }
 
+// un crossed off item
+const onGetAllItems2 = function (event) {
+  event.preventDefault()
+  api.getAllItems()
+    .then(ui.getAllItemsSuccess2)
+    .catch(ui.failure)
+}
+
+const onGetAllItems3 = function (event) {
+  event.preventDefault()
+  api.getAllItems()
+    .then(ui.getAllItemsSuccess3)
+    .catch(ui.failure)
+}
+
 const onTextUpdate = function (event) {
   event.preventDefault()
   const id = $(event.target).parent('div').data('id')
@@ -74,6 +89,8 @@ const onCompleteItem = function (event) {
 module.exports = {
   onUpload,
   onGetAllItems,
+  onGetAllItems2,
+  onGetAllItems3,
   onDeleteItem,
   onCompleteItem,
   onTextUpdate,
