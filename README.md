@@ -10,7 +10,7 @@ Once a user signs up and signs in, the user is able to create a bucket list item
 [Heroku](https://secure-bastion-12965.herokuapp.com/)
 
 ### Wireframes
-![Wireframes](https://i.imgur.com/7THkF3o.jpg)
+![Wireframes](https://i.imgur.com/7THkF3o.jpg?1)
 
 ### List of technologies used
 * HTML
@@ -40,6 +40,6 @@ As of right now, we don't really have major unsolved problems that are in our wa
 When we started our group project, we agreed that Lucas and Kwesi would work on the back-end API while Peter would start out with the front-end client. Once our back-end API was completed, Kwesi helped Peter finish the front-end while Lucas filled out both README's, so we could get those requirements out of the way sooner to focus on adding additional front-end features after completing all requirements. Whenever we ran into an issue, we would first search Google/StackOverflow to find the specific issue that we ran into, or, as a last resort, we would open an issue cue and have an instructor help us remotely.
 
 ### Members
-[Peter Chang](https://github.com/peterchang2)
-[Kwesi Atherley](https://github.com/KwesiAtherley)
-[Lucas Chartier](https://github.com/lucaspchartier)
+* [Peter Chang](https://github.com/peterchang2)
+* [Kwesi Atherley](https://github.com/KwesiAtherley)
+* [Lucas Chartier](https://github.com/lucaspchartier)
